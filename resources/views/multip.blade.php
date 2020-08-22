@@ -9,15 +9,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Calculadora Simple</title>
+
+    <style>
+        body{
+            background-color gradiendt();
+            background-color: rgba(0,0,0,0.2);
+        }
+        .container{
+            margin-top: 30px;
+            background-color: rgba(255,255,255,0.8);
+            box-shadow: 3px 3px 20px rgba(0,0,0,0.5);
+        }
+        h1{
+          margin-bottom: 30px;
+          text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        }
+        h3{
+          margin-top: 30px;
+          text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        }
+        p{
+          font-size: 30px;
+          text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+    </style>
   </head>
   <body>
-    <div class="container">    
-        <h1>La multiplicacion es:</h1>
+    <div class="container">
+        <h1>La <span class="text-info"> multiplicacion </span> es:</h1>
 
         <p>Primer numero: {{ $numb1 }}</p>
         <p>Segundo numero: {{ $numb2 }}</p>
 
-        <h3>La multiplicacion de los numeros introducidos es = {{ $multip }}</h3>
+        <h3>La <span class="text-info"> multiplicacion </span> de los numeros introducidos es = <span class="text-info">{{ $multip }}</span></h3>
     </div>
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

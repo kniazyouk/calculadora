@@ -54,12 +54,16 @@ class CalController extends Controller
         $numb1 = (float)$request->input('numb1');
         $numb2 = (float)$request->input('numb2');
 
-        $div = $numb1 / $numb2;
-        return view('div', [
-            'numb1' => $numb1,
-            'numb2' => $numb2,
-            'div' => $div
-        ]);
+        if ($numb2 != 0) {
+            $div = $numb1 / $numb2;
+            return view('div', [
+                'numb1' => $numb1,
+                'numb2' => $numb2,
+                'div' => $div
+            ]);
+        } else {
+          echo "ERROR /// El Divisor NO puede ser = '0' ///";
+        }
     }
 
     public function pow(Request $request)
@@ -67,11 +71,16 @@ class CalController extends Controller
         $numb1 = (float)$request->input('numb1');
         $numb2 = (float)$request->input('numb2');
 
-        $pow = pow($numb1, $numb2);
-        return view('pow', [
-            'numb1' => $numb1,
-            'numb2' => $numb2,
-            'pow' => $pow
-        ]);
+        if ($numb1 != 0) {
+          $pow = pow($numb1, $numb2);
+          return view('pow', [
+              'numb1' => $numb1,
+              'numb2' => $numb2,
+              'pow' => $pow
+          ]);
+        } else {
+          echo "ERROR /// La Base NO puede ser = '0' ///";
+        }
+
     }
 }
